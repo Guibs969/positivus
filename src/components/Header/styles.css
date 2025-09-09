@@ -1,41 +1,80 @@
-.container {
+
+.header-container {
   display: flex;
-  position: relative;
-  height: 110px;
-  width: auto;
   justify-content: space-between;
-  
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px 0 16px;
+  box-sizing: border-box;
 }
 
-.img{
-  padding: 4%;
-  width:  220px;
-  height:  55px;
+.img {
+  width: 180px;
+  height: auto;
+  padding: 0;
 }
 .navbar {
-  padding-top:   5%;
-  padding-right: 7%;
   display: flex;
-  gap: 35px;
-
+  gap: 32px;
+  align-items: center;
+  padding: 0;
 }
-.navbar a{
+.navbar a {
   color: black;
-   cursor: pointer;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 4px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
 }
-.navbar a:hover{
+.navbar a:hover {
   color: rgb(172, 236, 194);
+  background: #2221;
 }
-.button{
+.button {
   border: 2px solid black;
-  padding: 20px 20px;
+  padding: 12px 24px;
   border-radius: 10px;
   cursor: pointer;
   font-weight: 600;
+  background: #fff;
+  color: #000;
   transition: background 0.2s, color 0.2s;
-  
 }
 .button:hover {
   background: #000;
   color: #fff;
+}
+
+@media (max-width: 900px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 8px 0 8px;
+    gap: 8px;
+  }
+  .navbar {
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .img {
+    width: 140px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header-container {
+    padding: 8px 2px 0 2px;
+  }
+  .img {
+    width: 100px;
+  }
+  .button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
 }
